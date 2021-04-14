@@ -57,15 +57,9 @@ export default {
     },
     //删除商品
     isDelete() {
-      /*for (let i = 0; i < this.cartLength; i++) {
-        if(this.cartList[i].checked) {
-          this.cartList.splice(i, 1);
-          i -= 1
-        }
-      }*/
-        for (let i = this.cartLength-1; i>=0; i--) {
-            this.cartList[i].checked&&this.cartList.splice(i, 1);
-        }
+      for (let i = this.cartLength - 1; i >= 0; i--) {
+        this.cartList[i].checked && this.cartList.splice(i, 1);
+      }
     }
   }
 }

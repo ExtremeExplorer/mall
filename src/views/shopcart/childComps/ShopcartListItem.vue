@@ -12,9 +12,8 @@
       <div class="item-desc">商品描述: {{ product.desc }}</div>
       <div class="info-bottom">
         <div class="item-price left">¥{{ product.price }}</div>
-        <!--<div class="item-count right">-->
+				<!-- 商品数量 -->
         <counter :counter="product"/>
-        <!--</div>-->
       </div>
     </div>
   </div>

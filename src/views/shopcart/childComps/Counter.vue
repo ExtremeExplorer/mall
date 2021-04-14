@@ -6,7 +6,7 @@
           @click="sub">
       <img src="~assets/img/shopcart/sub.svg" alt="">
     </span>
-    <span class="calculate" @click="showClick">
+    <span class="calculate" @click="isClick">
       x{{ counter.count }}
     </span>
     <span class="add"
@@ -47,7 +47,7 @@ export default {
       this.isDisable()
     },
     //显示加减按钮
-    showClick() {
+    isClick() {
       this.counter.isShow = !this.counter.isShow
       this.isDisable()
     },

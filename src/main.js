@@ -21,7 +21,7 @@ VhCheck()
 
 //使用懒加载插件
 Vue.use(VueLazyLoad, {
-  //站位图
+  //占位图
   loading: require('@/assets/img/common/placeholder.png')
 })
 

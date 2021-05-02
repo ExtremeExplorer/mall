@@ -4,7 +4,7 @@
       <router-view/>
     </keep-alive>
     <main-tab-bar/>
-    <icon></icon>
+    <icon/>
     <svg-icon/>
   </div>
 </template>
@@ -25,5 +25,5 @@ export default {
 </script>
 
 <style scoped>
-@import "./assets/css/base.css";
+@import "assets/css/base.css";
 </style>

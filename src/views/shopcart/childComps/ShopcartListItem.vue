@@ -4,15 +4,17 @@
     <div class="item-selector">
       <check-button :is-checked="product.checked" @click.native="checkedChange"/>
     </div>
-    <div class="item-img">
+    <div class="item-img" @click="itemClick">
       <img :src="product.image" alt="商品图片">
     </div>
     <div class="item-info">
-      <div class="item-title">{{ product.title }}</div>
-      <div class="item-desc">商品描述: {{ product.desc }}</div>
+      <div @click="itemClick">
+        <div class="item-title">{{ product.title }}</div>
+        <div class="item-desc">商品描述: {{ product.desc }}</div>
+      </div>
       <div class="info-bottom">
         <div class="item-price left">¥{{ product.price }}</div>
-				<!-- 商品数量 -->
+        <!-- 商品数量 -->
         <counter :counter="product"/>
       </div>
     </div>
@@ -35,8 +37,13 @@ export default {
     }
   },
   methods: {
+    //监听复选框
     checkedChange() {
       this.product.checked = !this.product.checked;
+    },
+    //跳转详情页
+    itemClick() {
+      this.$router.push('/detail/' + this.product.iid)
     }
   }
 }

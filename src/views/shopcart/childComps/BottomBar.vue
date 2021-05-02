@@ -4,9 +4,9 @@
                   :is-checked="isSelectAll"
                   @click.native="checkClick"/>
     <span>全选</span>
-    <span v-show="!isShow" class="buy-product right">结算 {{ settlement }}</span>
-    <span v-show="!isShow" class="total-price right">合计: <span>{{ totalPrice }}</span></span>
-    <span v-show="isShow" class="delete right" @click="isDelete">删除</span>
+    <span v-if="!isShow" class="buy-product right">结算 {{ settlement }}</span>
+    <span v-if="!isShow" class="total-price right">合计: <span>{{ totalPrice }}</span></span>
+    <span v-else="isShow" class="delete right" @click="isDelete">删除</span>
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
     ...mapGetters(['cartList', 'cartLength']),
     isSelectAll() {
       if (this.cartList.length === 0) return false
-      return !this.cartList.find(item => !item.checked) && !undefined
+      return !this.cartList.find(item => !item.checked) && true
     },
     //合计
     totalPrice() {

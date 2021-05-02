@@ -21,11 +21,13 @@ export default {
     }
   },
   computed: {
+    //加载图片
     showImage() {
       return this.goodsItem.img || this.goodsItem.image || this.goodsItem.show.img
     }
   },
   methods: {
+    //跳转详情页
     itemClick() {
       this.$router.push('/detail/' + this.goodsItem.iid)
     }

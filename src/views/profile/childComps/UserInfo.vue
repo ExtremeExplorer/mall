@@ -1,5 +1,5 @@
 <template>
-  <div id="user-info">
+  <div id="user-info" @click="login">
     <a href="#" class="clear-fix">
       <slot name="user-icon">
         <svg class="privateImage-svg left">
@@ -24,7 +24,12 @@
 
 <script>
 export default {
-  name: "UserInfo"
+  name: "UserInfo",
+  methods:{
+    login(){
+      this.$router.replace('/login')
+    }
+  }
 }
 </script>
 

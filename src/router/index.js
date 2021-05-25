@@ -6,6 +6,7 @@ const Profile = () => import('@/views/profile/Profile')
 const Home = () => import('@/views/home/Home')
 const Category = () => import('@/views/category/Category')
 const Detail = () => import('@/views/detail/Detail')
+const Login = () => import('@/views/login/Login')
 
 //安装插件
 Vue.use(Router)
@@ -36,6 +37,10 @@ export default new Router({
     {
       path: '/detail/:iid',
       component: Detail
+    },
+    {
+      path: '/login',
+      component: Login
     }
   ],
   mode: 'history'
